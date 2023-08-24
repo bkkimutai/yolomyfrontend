@@ -1,22 +1,18 @@
-import logo from './logo.svg';
-import React from 'react';
-import './App.css';
-import Header from './componens/header/Header';
-import Footer from './componens/footer/Footer';
-import AboutUs from './componens/aboutus/AboutUs';
-import ProductList from './componens/productlist/ProductList';
-import ProductControl from './componens/productcontrol/ProductControl';
-import NavBar from './componens/navbar/NavBar';
-import Main from './componens/main/Main';
 
+// import React from 'react';
+import React, { useState } from 'react'
+import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
+import ProductControl from './components/ProductControl';
 
 function App() {
   return (
     <React.Fragment>
         <div className="container-fluid">
-          <Header />
-          <ProductControl />
-          {/* <ProductList /> */}
+          {/* <Header /> */}
+          <ProductControl />     
           <AboutUs />
           <Footer />
         </div>

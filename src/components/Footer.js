@@ -1,12 +1,12 @@
 import React from 'react';
-import g_plus from '../../images/social_icons/g_plus.png';
-import facebook from '../../images/social_icons/facebook.png';
-import youtube from '../../images/social_icons/you_tube.png';
-import stumble_upon from '../../images/social_icons/stumble_upon.png';
-import skype from '../../images/social_icons/skype.png';
-import flickr from '../../images/social_icons/flickr.png';
-import twitter from '../../images/social_icons/twitter.png';
-import pinterest from '../../images/social_icons/pinterest.png';
+import g_plus from '../images/social_icons/g_plus.png';
+import facebook from '../images/social_icons/facebook.png';
+import youtube from '../images/social_icons/you_tube.png';
+import stumble_upon from '../images/social_icons/stumble_upon.png';
+// import skype from '../images/social_icons/skype.png';
+import flickr from '../images/social_icons/flickr.png';
+import twitter from '../images/social_icons/twitter.png';
+import pinterest from '../images/social_icons/pinterest.png';
 
 function Footer () {
    return (

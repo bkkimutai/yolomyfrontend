@@ -1,9 +1,14 @@
 import React from 'react';
-import logo from '../../images/logo.png';
-import shop from '../../images/shop.png';
-import './NavBar.css';
+import logo from '../images/logo.png';
+import shop from '../images/shop.png';
+import './styles/NavBar.css';
 
-function NavBar () {
+function NavBar(props){
+    const handleLoginClick = (event) => {
+        event.preventDefault(); // Prevent the default behavior of the anchor tag
+        props.loginClicked(); // Call the provided function when the "Login" link is clicked
+      };
+    
    return (
         <React.Fragment>
             <nav className="navbar  navbar-expand-lg navbar-light top-navbar navbar-fixed-top" data-toggle="sticky-onscroll">
@@ -25,9 +30,13 @@ function NavBar () {
                                <a className="nav-link" href="#products">Products</a>
                             </li>
                             <li className="nav-item">
+                               <a className="nav-link" href= "#Login Form" onClick = {handleLoginClick}>Login</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link shop-img" href="/">
                                    <img src={shop} alt="logo" className="img-fluid" />
                                 </a>
+                               
                             </li>
                         </ul>
                     </div>

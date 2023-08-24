@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Product from './Product';
-import './ProductList.css';
+import './styles/ProductList.css';
 
  function ProductList(props) {
     return (
@@ -26,13 +26,12 @@ import './ProductList.css';
             <div className="men-products">
                 <div className="row">
                 {props.productList.map((product) =>
-                    <  Product 
-                    whenProductIsClicked = {props.onProductSelection}
+                    <  Product whenProductIsClicked = {props.onProductSelection}
                     photo = {product.photo}
                     name = {product.name}
                     price = {product.price}
-                    id = {product.id}
-                    key= {product.id}/>
+                    id = {product._id} />
+                    // key= {product.id}/>
  
                 )}
                 </div>

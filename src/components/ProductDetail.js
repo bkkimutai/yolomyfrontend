@@ -1,7 +1,8 @@
 import React from 'react'
-import './ProductDetail.css';
+import './styles/ProductDetail.css';
 
 function ProductDetail(props) {
+    const { deleteMessage, editError } = props;
     return (
         <React.Fragment>
  
@@ -17,7 +18,15 @@ function ProductDetail(props) {
                                
                             </div>
                             <div className="details col-md-6">
-                                <h3 className="product-title">{props.product.name} </h3>
+                                {/* <h3 className="product-title">{props.product.name} </h3> */}
+                                <div className = "row">
+                                    <div className="col-md-6">
+                                        <h3 className="product-title">{props.product.name} </h3>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <button className="add-to-cart btn btn-default float-right" onClick ={props.onEditProductClick} > Edit Product</button> {/*new code*/}
+                                    </div>
+                                </div>
                                 <div className="rating">
                                     <div className="stars">
                                         <span className="fa fa-star checked"></span>
@@ -44,7 +53,9 @@ function ProductDetail(props) {
                                 <div className="action">
                                     <button className="add-to-cart btn btn-default"  type="button">Buy Product</button>
                                     {/* <button className="like btn btn-default" type="button"><span className="fa fa-heart"></span></button> */}
-                                    <button className="add-to-cart btn btn-default float-right"> Delete Product</button>
+                                    <button className="add-to-cart btn btn-default float-right" onClick={()=> props.onDeleteProduct(props.product._id)}> Delete Product </button>
+                                    {deleteMessage && <p className="error-message text-danger animate-bounce">Please login to delete.</p>}
+                                    {editError && <p className="error-message text-danger">Please login to Edit Product.</p>}
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import './NewProductForm.css';
-import {v4} from 'uuid';
+import './styles/NewProductForm.css';
 
 function NewProductForm(props) {
     function handleNewProductFormSubmission(event){
@@ -11,7 +10,7 @@ function NewProductForm(props) {
             price: event.target.price.value,
             description: event.target.description.value,
             quantity: event.target.quantity.value,
-            id: v4()
+            photo: event.target.photo.value
         })
     }
    return (
@@ -62,6 +61,17 @@ function NewProductForm(props) {
                            required
                        />
                        <label htmlFor="quantity"> Quantity</label>
+                   </div>
+                   <div className="form-input-material">
+                       <input type = 'text'
+                           name = 'photo'
+                           placeholder = ' '
+                           className = 'form-control-material'
+                           autoComplete="off"
+                           id = 'photo'
+                           required
+                       />
+                       <label htmlFor="photo"> Photo URL</label>
                    </div>
                    <button type="submit" className="btn btn-primary btn-ghost">Add Product</button>   
                </form>

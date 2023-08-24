@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import './product.css';
+import './styles/product.css';
 
 function Product(props) {
    return (
@@ -25,12 +24,6 @@ function Product(props) {
        </div>
        </React.Fragment>
    )
-}
-
-Product.propTypes ={
-   name: PropTypes.string,
-   size: PropTypes.string,
-   Price: PropTypes.string
 }
 
 export default Product;

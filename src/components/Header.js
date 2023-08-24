@@ -1,18 +1,18 @@
 import React from "react";
-import NavBar from '../navbar/NavBar';
-import './Header.css';
+import NavBar from './NavBar';
+import './styles/Header.css';
 
-function Header() {
+function Header(props) {
   return (
     <React.Fragment>
     <div className="section-1">
         <div className="container">
           <div className="row">
-          <NavBar />
+          <NavBar loginClicked = {props.whenLoginClicked} />
             <div className="col-12">
               <div className="title d-flex">
                 <div className="justify-content-center align-self-center w-100">
-                  <div className="big-title text-center">
+                  <div className="big-title text-center">                 
                     Our Clothing, Your Comfort
                   </div>
                   <div className="title-desc text-center">
